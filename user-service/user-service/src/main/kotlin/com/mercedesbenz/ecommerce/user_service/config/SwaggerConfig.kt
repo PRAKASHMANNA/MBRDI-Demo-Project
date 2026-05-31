@@ -1,0 +1,20 @@
+package com.mercedesbenz.ecommerce.user_service.config
+
+
+import io.swagger.v3.oas.models.OpenAPI
+import io.swagger.v3.oas.models.info.Info
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+
+@Configuration
+class SwaggerConfig {
+
+    @Bean
+    fun openAPI(): OpenAPI = OpenAPI()
+        .info(
+            Info()
+                .title("User Service API")
+                .description("Mercedes-Benz E-Commerce - User Service")
+                .version("1.0.0")
+        )
+}

@@ -1,0 +1,837 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f8fafc;
+  background: #050505;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(148, 163, 184, 0.18), transparent 34%),
+    linear-gradient(135deg, #020617 0%, #0f172a 45%, #000000 100%) !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.luxury-navbar {
+  background: rgba(2, 6, 23, 0.9) !important;
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+}
+
+.brand-logo {
+  color: #ffffff !important;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.03em;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+.nav-pill-group .nav-link {
+  color: #cbd5e1 !important;
+  border-radius: 999px;
+  padding: 9px 16px !important;
+  margin-left: 4px;
+  font-weight: 700;
+}
+
+.nav-pill-group .nav-link.active,
+.nav-pill-group .nav-link:hover {
+  background: rgba(255, 255, 255, 0.13);
+  color: #ffffff !important;
+}
+
+/* COMMON */
+
+.page-container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 36px 0 70px;
+  color: #f8fafc;
+}
+
+.modal-content {
+  border-radius: 22px !important;
+}
+
+.buy-summary {
+  color: #111827;
+}
+
+.buy-summary h4 {
+  font-weight: 900;
+}
+
+.buy-summary p {
+  color: #475569;
+}
+
+.buy-price {
+  font-size: 28px;
+  font-weight: 900;
+  color: #000000;
+}
+
+/* PRODUCT PAGE */
+
+.benz-showroom-page {
+  padding-top: 28px;
+}
+
+.benz-hero {
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 34px;
+  margin-bottom: 34px;
+}
+
+.benz-hero-content,
+.benz-hero-car-panel {
+  border-radius: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+}
+
+.benz-hero-content {
+  padding: 54px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(31, 41, 55, 0.88));
+}
+
+.benz-hero-content h1 {
+  font-size: clamp(3rem, 6vw, 6.2rem);
+  line-height: 0.92;
+  font-weight: 950;
+  letter-spacing: -0.075em;
+  margin: 22px 0;
+}
+
+.benz-hero-content p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.1rem;
+  max-width: 760px;
+}
+
+.benz-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.benz-hero-car-panel {
+  position: relative;
+  min-height: 560px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.32), transparent 28%),
+    linear-gradient(160deg, #f8fafc, #cbd5e1 46%, #111827 47%, #020617);
+}
+
+.benz-car-glow {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  width: 320px;
+  height: 320px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  filter: blur(55px);
+}
+
+.benz-car-shape {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  width: 78%;
+  height: 150px;
+  transform: translateX(-50%);
+  border-radius: 999px 999px 42px 42px;
+  background: linear-gradient(135deg, #020617, #475569 55%, #f8fafc);
+  box-shadow:
+    inset 0 -22px 34px rgba(0, 0, 0, 0.35),
+    0 36px 70px rgba(0, 0, 0, 0.42);
+}
+
+.benz-wheel {
+  position: absolute;
+  bottom: -18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #020617;
+  border: 9px solid #f8fafc;
+}
+
+.benz-wheel.left {
+  left: 18%;
+}
+
+.benz-wheel.right {
+  right: 18%;
+}
+
+.benz-feature-box {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  border-radius: 26px;
+  background: rgba(2, 6, 23, 0.76);
+  color: #fff;
+  backdrop-filter: blur(18px);
+}
+
+.benz-feature-box span {
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+}
+
+.benz-feature-box h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 8px 0 2px;
+}
+
+.benz-feature-box p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.benz-feature-box strong {
+  font-size: 1.6rem;
+}
+
+.benz-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 34px;
+}
+
+.benz-stats-row div {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 26px;
+  padding: 24px;
+  color: #111827;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.benz-stats-row span {
+  display: block;
+  color: #6b7280;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.benz-stats-row strong {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.benz-filter-panel {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 24px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.benz-filter-panel h2 {
+  margin: 0;
+  font-weight: 900;
+  color: #111827;
+}
+
+.benz-filter-panel p {
+  margin: 4px 0 0;
+  color: #6b7280;
+}
+
+.benz-filter-controls {
+  display: grid;
+  gap: 14px;
+}
+
+.benz-category-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.benz-category-tab {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #e5e7eb;
+  color: #111827;
+  font-weight: 800;
+}
+
+.benz-category-tab.active {
+  background: #111827;
+  color: #fff;
+}
+
+.benz-model-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 34px !important;
+  background: rgba(8, 11, 18, 0.92) !important;
+  color: #fff !important;
+  box-shadow: 0 28px 75px rgba(0, 0, 0, 0.28);
+}
+
+.benz-model-visual {
+  position: relative;
+  height: 240px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.2), transparent 28%),
+    linear-gradient(135deg, #111827, #020617);
+}
+
+.benz-model-light {
+  position: absolute;
+  width: 230px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.18);
+  filter: blur(36px);
+}
+
+.benz-model-car {
+  position: relative;
+  width: 72%;
+  height: 86px;
+  border-radius: 999px 999px 28px 28px;
+  background: linear-gradient(135deg, #f8fafc, #9ca3af 52%, #111827);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.45);
+}
+
+.benz-model-car .wheel {
+  position: absolute;
+  bottom: -14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #020617;
+  border: 7px solid #f8fafc;
+}
+
+.benz-model-car .one {
+  left: 18%;
+}
+
+.benz-model-car .two {
+  right: 18%;
+}
+
+.benz-stock-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.benz-model-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.benz-model-title-row h3 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin: 12px 0 0;
+}
+
+.benz-model-id {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 900;
+}
+
+.benz-model-desc {
+  color: rgba(255, 255, 255, 0.64);
+  min-height: 50px;
+  margin-top: 14px;
+}
+
+.benz-model-info {
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr;
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.benz-model-info div {
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.benz-model-info span {
+  display: block;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  margin-bottom: 6px;
+}
+
+.benz-model-info strong {
+  font-size: 1.18rem;
+}
+
+.benz-card-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+/* ORDERS / INVENTORY / USERS / NOTIFICATIONS */
+
+.orders-top-panel,
+.warehouse-hero,
+.kafka-hero,
+.crm-sidebar {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.03)),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 35%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  padding: 34px;
+  color: #fff;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.orders-top-panel,
+.warehouse-hero,
+.kafka-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.orders-top-panel h1,
+.warehouse-hero h1,
+.kafka-hero h1,
+.crm-sidebar h1 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 900;
+  margin: 16px 0 12px;
+}
+
+.orders-top-panel p,
+.warehouse-hero p,
+.kafka-hero p,
+.crm-sidebar p {
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 760px;
+  margin: 0;
+}
+
+.order-summary-card,
+.stock-card,
+.customer-card,
+.event-card,
+.event-filter-card {
+  background: rgba(12, 14, 20, 0.86) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.26);
+}
+
+.order-summary-card span,
+.stock-card span,
+.customer-card span,
+.kafka-side-stats span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.order-summary-card h2 {
+  font-size: 2.4rem;
+  margin: 10px 0;
+}
+
+.order-summary-card p {
+  color: rgba(255, 255, 255, 0.58);
+  margin: 0;
+}
+
+.order-tracking-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 0 !important;
+  border-radius: 26px !important;
+  margin-bottom: 22px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+.order-card-header,
+.event-card-top,
+.stock-card-top,
+.customer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.order-card-header h3,
+.event-card-top h3,
+.stock-card h3,
+.customer-card h3 {
+  margin: 12px 0 6px;
+  font-weight: 900;
+}
+
+.order-card-header p {
+  color: #5d6572;
+  margin: 0;
+}
+
+.status-badge {
+  font-size: 0.85rem;
+  padding: 9px 12px !important;
+}
+
+.order-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.order-card-grid div {
+  background: #f5f6f8;
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.order-card-grid span {
+  display: block;
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.order-card-grid strong {
+  color: #111827;
+}
+
+.order-progress-area {
+  margin-top: 10px;
+}
+
+.order-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closed-order-text {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* INVENTORY */
+
+.warehouse-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.warehouse-stats-strip div {
+  background: rgba(255, 255, 255, 0.92);
+  color: #111827;
+  border-radius: 22px;
+  padding: 22px;
+}
+
+.warehouse-stats-strip span {
+  display: block;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.warehouse-stats-strip strong {
+  font-size: 2rem;
+}
+
+.stock-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #ffffff, #bfc7d5);
+  color: #111827;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.stock-card p {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.stock-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.stock-numbers div {
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.stock-numbers strong {
+  display: block;
+  font-size: 2rem;
+}
+
+.stock-health-bar {
+  margin-top: 18px;
+}
+
+/* NOTIFICATIONS */
+
+.event-filter-card {
+  margin-bottom: 26px;
+}
+
+.kafka-side-stats {
+  display: grid;
+  gap: 16px;
+  position: sticky;
+  top: 96px;
+}
+
+.kafka-side-stats div {
+  background: rgba(255, 255, 255, 0.92);
+  color: #111827;
+  border-radius: 22px;
+  padding: 22px;
+}
+
+.kafka-side-stats strong {
+  display: block;
+  font-size: 2.3rem;
+  margin-top: 8px;
+}
+
+.event-stream {
+  position: relative;
+  padding-left: 28px;
+}
+
+.event-stream::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.event-item {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.event-dot {
+  position: absolute;
+  left: -27px;
+  top: 28px;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 4px solid #111827;
+  z-index: 2;
+}
+
+.event-card p {
+  color: rgba(255, 255, 255, 0.74);
+  margin: 18px 0;
+}
+
+.event-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.9rem;
+}
+
+/* USERS */
+
+.crm-sidebar {
+  position: sticky;
+  top: 96px;
+  min-height: 520px;
+}
+
+.crm-big-number {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  margin: 34px 0;
+}
+
+.crm-big-number span {
+  display: block;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.crm-big-number strong {
+  display: block;
+  font-size: 4rem;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+.customer-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #f8fafc, #9ca3af);
+  color: #111827;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.customer-info {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.customer-info div {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.customer-info strong {
+  display: block;
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .benz-hero,
+  .benz-filter-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .benz-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .orders-top-panel,
+  .warehouse-hero,
+  .kafka-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .warehouse-stats-strip,
+  .order-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .crm-sidebar,
+  .kafka-side-stats {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
+  .benz-hero-content {
+    padding: 34px;
+  }
+
+  .benz-hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .benz-stats-row,
+  .benz-model-info,
+  .benz-card-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .benz-filter-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .page-container {
+    width: min(100% - 20px, 1180px);
+  }
+}
